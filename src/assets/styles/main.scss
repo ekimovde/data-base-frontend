@@ -1,0 +1,133 @@
+html {
+  overflow: auto !important;
+  background: var(--v-primary-background-1-base);
+  scrollbar-width: thin;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 31px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 13px;
+}
+
+h6 {
+  font-size: 11px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+span {
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  line-height: initial;
+  list-style: none !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+div,
+p,
+input,
+form {
+  box-sizing: border-box;
+}
+
+input {
+  border-style: none;
+  outline: none;
+}
+
+button {
+  &:focus {
+    outline: none;
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+.tooltip-content {
+  font-size: 13px;
+  color: var(--v-primary-text-3-base);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.v-application--wrap {
+  background: var(--v-primary-background-1-base) !important;
+  min-height: auto;
+}
+
+.v-application {
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+ul,
+li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.v-btn {
+  text-transform: initial;
+}
