@@ -5,7 +5,8 @@
 
       <vButton
         v-if="service.hasAdminRole()"
-        background-color="primary-violet-1"
+        background-color="primary-green-1"
+        text-color="primary-white-1"
         @click="service.showModalAdd = true"
       >
         Добавить пользователя
@@ -22,8 +23,6 @@
       <vTable v-else :rows="service.getUsersCorrect()">
         <vTableColumn prop="id" title="ID">
           <template slot-scope="{ row }">
-            <i class="home-page__icon bx bx-cube" />
-
             <div>{{ row.id }}</div>
           </template>
         </vTableColumn>
@@ -36,13 +35,7 @@
 
         <vTableColumn prop="role" title="Роль">
           <template slot-scope="{ row }">
-            <vButton
-              small
-              background-color="primary-blue-5"
-              text-color="primary-blue-1"
-            >
-              {{ row.role }}
-            </vButton>
+            {{ row.role }}
           </template>
         </vTableColumn>
 
@@ -62,18 +55,13 @@
           title="Болезнь"
         >
           <template slot-scope="{ row }">
-            <vButton
-              v-if="row.user_patient"
-              small
-              background-color="primary-red-4"
-              text-color="primary-red-1"
-            >
+            <div v-if="row.user_patient">
               {{
                 row.user_patient.disease
                   ? row.user_patient.disease
                   : "Нет болезни"
               }}
-            </vButton>
+            </div>
 
             <div v-else>---</div>
           </template>
@@ -181,12 +169,6 @@ export default {
   &__wrapper {
     width: 100%;
     max-width: 80%;
-  }
-
-  &__icon {
-    margin-right: 5px;
-    font-size: 16px;
-    color: var(--v-primary-text-1-base);
   }
 
   &__button {

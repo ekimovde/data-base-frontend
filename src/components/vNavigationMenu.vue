@@ -41,7 +41,7 @@ export default {
     navigationItems() {
       let routes = [
         { icon: "bx bx-compass", name: "home", text: "Главная" },
-        { icon: "bx bx-accessibility", name: "chamber", text: "Палаты" },
+        { icon: "bx bx-user-voice", name: "chamber", text: "Палаты" },
       ];
 
       if (this.GET_ROLE === "ADMIN")
@@ -78,6 +78,10 @@ export default {
     &.router-link-active {
       .v-button {
         background-color: var(--v-primary-blue-1-base) !important;
+      }
+
+      i {
+        color: var(--v-primary-white-1-base) !important;
       }
     }
   }

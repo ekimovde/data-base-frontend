@@ -8,8 +8,8 @@
       @input="service.onCloseDialog()"
     >
       <vForm :has-steps="false">
-        <vFormItem :value="1" image="gamepad.png">
-          <template #title> Решили изменить аккаунт? </template>
+        <vFormItem :value="1">
+          <template #title> Редактирование аккаунта </template>
 
           <template #description> Измените все необходимые поля! </template>
 
@@ -32,6 +32,7 @@
         <template #buttons>
           <vButton
             background-color="primary-blue-1"
+            text-color="primary-white-1"
             :loading="service.loading"
             :disabled="service.isDisabled()"
             @click="service.onSend()"

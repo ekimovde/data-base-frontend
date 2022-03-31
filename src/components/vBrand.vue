@@ -1,8 +1,8 @@
 <template>
   <div class="v-brand">
-    <vLogo class="v-brand__logo" :size="30" />
+    <!-- <vLogo class="v-brand__logo" :size="30" /> -->
 
-    <h2 class="v-brand__title">Medical</h2>
+    <h2 class="v-brand__title">Медицина</h2>
   </div>
 </template>
 

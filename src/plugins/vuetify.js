@@ -11,14 +11,14 @@ export default new Vuetify({
     options: { customProperties: true, variations: false },
     themes: {
       light: {
-        "primary-background-1": "#0C0F11",
-        "primary-background-2": "#1A2025",
-        "primary-background-3": "#21282E",
-        "primary-background-4": "#2C343C",
+        "primary-background-1": "#EEEEEE",
+        "primary-background-2": "#FDFDFD",
+        "primary-background-3": "#EFF0F0",
+        "primary-background-4": "#DDDCDD",
 
-        "primary-text-1": "#68717C",
-        "primary-text-2": "#A4ACB2",
-        "primary-text-3": "#FFFFFF",
+        "primary-text-1": "#AAAAA9",
+        "primary-text-2": "#666766",
+        "primary-text-3": "#000000",
 
         "primary-white-1": "#FFFFFF",
         "primary-black-1": "#000000",

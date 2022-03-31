@@ -5,7 +5,8 @@
 
       <vButton
         v-if="service.hasAdminRole()"
-        background-color="primary-violet-1"
+        background-color="primary-green-1"
+        text-color="primary-white-1"
         @click="service.showModalAdd = true"
       >
         Добавить палату
@@ -22,8 +23,6 @@
       <vTable v-else :rows="service.getChambersCorrect()">
         <vTableColumn prop="id" title="ID">
           <template slot-scope="{ row }">
-            <i class="chamber-page__icon bx bx-cube" />
-
             <div>{{ row.id }}</div>
           </template>
         </vTableColumn>
@@ -43,7 +42,7 @@
         <vTableColumn
           v-if="service.hasAdminDoctorRole()"
           prop="user_patient"
-          title="Возвраст"
+          title="Возраст"
         >
           <template slot-scope="{ row }">
             <div>{{ row.user_patient ? row.user_patient.age : "---" }}</div>
@@ -182,12 +181,6 @@ export default {
   &__wrapper {
     width: 100%;
     max-width: 80%;
-  }
-
-  &__icon {
-    color: var(--v-primary-text-1-base);
-    margin-right: 5px;
-    font-size: 16px;
   }
 }
 </style>

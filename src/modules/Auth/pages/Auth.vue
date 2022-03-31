@@ -1,7 +1,7 @@
 <template>
   <div class="auth-page">
     <vForm :width="400" :step="service.step" :steps="service.steps">
-      <vFormItem :value="1" image="hi.png">
+      <vFormItem :value="1">
         <template #title> Добро пожаловать! </template>
 
         <template #description>
@@ -27,7 +27,7 @@
         </template>
       </vFormItem>
 
-      <vFormItem :value="2" image="bag-money.png">
+      <vFormItem :value="2">
         <template #title> Решили создать аккаунт? </template>
 
         <template #description>
@@ -78,6 +78,7 @@
             class="text-uppercase"
             block
             background-color="primary-blue-1"
+            text-color="primary-white-1"
             :loading="service.loading"
             :disabled="service.isDisabled()"
             @click="service.onSend()"

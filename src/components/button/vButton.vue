@@ -27,23 +27,23 @@
 
 <script>
 export default {
-  name: 'vButton',
+  name: "vButton",
   props: {
     textColor: {
       type: String,
-      default: 'primary-text-3',
+      default: "primary-text-3",
     },
     backgroundColor: {
       type: String,
-      default: 'primary-transparent',
+      default: "primary-transparent",
     },
     borderColor: {
       type: String,
-      default: '',
+      default: "",
     },
     iconColor: {
       type: String,
-      default: 'primary-text-3',
+      default: "primary-text-3",
     },
     outlined: {
       type: Boolean,
@@ -51,7 +51,7 @@ export default {
     },
     icon: {
       type: String,
-      default: '',
+      default: "",
     },
     iconSize: {
       type: Number,
@@ -64,39 +64,39 @@ export default {
   },
   computed: {
     vuetifyTextColor() {
-      return this.$vuetify.theme.themes.light[this.textColor]
+      return this.$vuetify.theme.themes.light[this.textColor];
     },
     vuetifyBackgroundColor() {
-      if (this.backgroundColor === 'primary-transparent')
-        return 'hsla(0, 0%, 0%, 0)'
+      if (this.backgroundColor === "primary-transparent")
+        return "hsla(0, 0%, 0%, 0)";
 
-      return this.$vuetify.theme.themes.light[this.backgroundColor]
+      return this.$vuetify.theme.themes.light[this.backgroundColor];
     },
     vuetifyBorderColor() {
-      return this.$vuetify.theme.themes.light[this.borderColor]
+      return this.$vuetify.theme.themes.light[this.borderColor];
     },
     vuetifyIconColor() {
-      return this.$vuetify.theme.themes.light[this.iconColor]
+      return this.$vuetify.theme.themes.light[this.iconColor];
     },
     sizeAttrs() {
       if (this.size)
         return {
-          'min-width': this.size,
-          'min-height': this.size,
+          "min-width": this.size,
+          "min-height": this.size,
           height: this.size,
           width: this.size,
-        }
+        };
 
-      return {}
+      return {};
     },
     bindedAttrs() {
       return {
         ...this.$attrs,
         ...this.sizeAttrs,
-      }
+      };
     },
   },
-}
+};
 </script>
 
 <style lang="scss">
@@ -108,13 +108,13 @@ export default {
 
   &.v-btn--disabled:not(.v-btn--flat):not(.v-btn--text):not(.v-btn-outlined) {
     background-color: var(--v-primary-background-3-base) !important;
-    color: var(--v-primary-text-1-base) !important;
+    color: var(--v-primary-red-1-base) !important;
   }
 
   &_primary {
     &.v-btn--disabled:not(.v-btn--flat):not(.v-btn--text):not(.v-btn-outlined) {
       background-color: var(--v-primary-blue-1-base) !important;
-      color: var(--v-primary-text-3-base) !important;
+      color: var(--v-primary-white-1-base) !important;
       opacity: 0.6;
     }
   }

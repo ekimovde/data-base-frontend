@@ -8,8 +8,8 @@
       @input="service.onCloseDialog()"
     >
       <vForm :has-steps="false">
-        <vFormItem :value="1" image="basketball.png">
-          <template #title> Решили добавить аккаунт? </template>
+        <vFormItem :value="1">
+          <template #title> Добавление аккаунт? </template>
 
           <template #description>
             Выберите роль и заполните все необходимые поля!
@@ -56,6 +56,7 @@
         <template #buttons>
           <vButton
             background-color="primary-blue-1"
+            text-color="primary-white-1"
             :loading="service.loading"
             :disabled="service.isDisabled()"
             @click="service.onSend()"

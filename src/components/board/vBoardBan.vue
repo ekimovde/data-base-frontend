@@ -5,22 +5,26 @@
       max-width="400"
       :value="value"
       :overlay-opacity="1"
-      :overlay-color="$vuetify.theme.themes.light['primary-black-1']"
+      :overlay-color="$vuetify.theme.themes.light['primary-white-1']"
     >
       <vBoard :step="1" :steps="1">
-        <vBoardItem :value="1">
+        <vBoardItem :value="1" :has-header="false">
           <template #subtitle> Проверка доступа </template>
 
-          <template #title> Добро пожаловать в Medicine! </template>
+          <template #title> Добро пожаловать в Медицину! </template>
 
           <template #description>
-            Мы рады видеть вас на борту. <br />
-            Но Ваш профиль заблокирован, обратитесь к Администратору!
+            Мы рады видеть Вас! <br />
+            Ваш профиль заблокирован, обратитесь к Администратору!
           </template>
         </vBoardItem>
 
         <template #buttons>
-          <vButton background-color="primary-red-1" @click="onLogout">
+          <vButton
+            background-color="primary-red-1"
+            text-color="primary-white-1"
+            @click="onLogout"
+          >
             Выйти
           </vButton>
         </template>

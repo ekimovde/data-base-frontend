@@ -99,7 +99,11 @@
 
       <template #buttons>
         <div class="profile-edit__bottom">
-          <vButton background-color="primary-red-1" @click="service.onLogout()">
+          <vButton
+            background-color="primary-red-1"
+            text-color="primary-white-1"
+            @click="service.onLogout()"
+          >
             Выйти
           </vButton>
         </div>
