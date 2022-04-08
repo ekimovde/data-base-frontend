@@ -37,6 +37,12 @@ const routes = [
     component: () => import("./modules/Audit/pages/Audit"),
     meta: { layout: "default", requiresAuth: true },
   },
+  {
+    path: "/schedule",
+    name: "schedule",
+    component: () => import("./modules/Schedule/pages/Schedule"),
+    meta: { layout: "default", requiresAuth: true },
+  },
 ];
 
 const router = new VueRouter({

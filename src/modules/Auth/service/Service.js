@@ -26,6 +26,11 @@ export default class Service {
         label: "Пациент",
         value: "PATIENT",
       },
+      {
+        icon: "bx bx-registered bx-tada",
+        label: "Админ",
+        value: "ADMIN",
+      },
     ];
   }
 

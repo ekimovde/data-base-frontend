@@ -137,3 +137,24 @@ export const auditApi = {
       });
   },
 };
+
+// SCHEDULE
+export const scheduleApi = {
+  index: () => {
+    return $authHost
+      .get("api/schedule")
+      .then(({ data }) => data)
+      .catch((error) => {
+        throw error;
+      });
+  },
+
+  create: (payload) => {
+    return $authHost
+      .post("api/schedule", payload)
+      .then(({ data }) => data)
+      .catch((error) => {
+        throw error;
+      });
+  },
+};

@@ -42,6 +42,7 @@ export default {
       let routes = [
         { icon: "bx bx-compass", name: "home", text: "Главная" },
         { icon: "bx bx-user-voice", name: "chamber", text: "Палаты" },
+        { icon: "bx bx-bus-school", name: "schedule", text: "Расписание" },
       ];
 
       if (this.GET_ROLE === "ADMIN")

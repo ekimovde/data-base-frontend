@@ -7,9 +7,10 @@ import profile from "./profile/store";
 import users from "./users/store";
 import chamber from "./chamber/store";
 import audit from "./audit/store";
+import schedule from "./schedule/store";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  modules: { auth, alerts, profile, users, chamber, audit },
+  modules: { auth, alerts, profile, users, chamber, audit, schedule },
 });
